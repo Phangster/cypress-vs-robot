@@ -13,7 +13,7 @@ Then('I click key in flower to the searchbar', () => {
 });
 
 And('I click enter', () => {
-  cy.get('.pure-form').submit();
+  cy.getByClassName('pure-form').submit();
 });
 
 Then('I should see first header', () => {

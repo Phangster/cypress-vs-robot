@@ -23,3 +23,13 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+// getByClassName
+Cypress.Commands.add("getByClassName", (name, timeout = 4000) => {
+    cy.get(`.${name}`, { timeout });
+});
+
+// getByQaAttribute
+Cypress.Commands.add("getByQaAttribute", (name, timeout = 4000) => {
+    cy.get(`[data-qa="${name}"]`, { timeout });
+});
