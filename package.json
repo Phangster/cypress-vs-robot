@@ -1,0 +1,27 @@
+{
+  "name": "robot-vs-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:e2e:robot": "robot -d robot/result -v BROWSER:chrome .",
+    "test:e2e:cypress": "npx cypress run --browser chrome --spec cypress/specs/*.feature"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "install": "^0.13.0",
+    "npm": "^8.13.1",
+    "or": "^0.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/specs"
+  },
+  "engines": {
+    "npm": ">=8.1.2",
+    "node": ">=16.13.0"
+  }
+}
